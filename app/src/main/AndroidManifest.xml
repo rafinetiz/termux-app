@@ -167,7 +167,8 @@
         </service>
 
         <receiver android:name=".app.TermuxOpenReceiver" />
-
+        <receiver android:name=".app.TermuxSessionReceiver" />
+        
         <provider
             android:name=".app.TermuxOpenReceiver$ContentProvider"
             android:authorities="${TERMUX_PACKAGE_NAME}.files"
