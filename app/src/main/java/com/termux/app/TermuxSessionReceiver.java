@@ -13,7 +13,8 @@ class TermuxSessionReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         final String  session_name = intent.getStringExtra("sess_name");
         final boolean fail_safe    = intent.getBooleanExtra("fail_safe", false);
-        
+        String command;
+
         mTerminalSessionClient.addNewSession(fail_safe, session_name);
     }
 }
